@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 입력</title>
+</head>
+<body>
+    <h1>저장된 정보 확인</h1>
+    <form action="/users">
+        <input type="submit" value="정보 확인">
+    </form>
+
+    <h1>간단한 정보 입력</h1>
+    <form action="/add" method="POST">
+        이름 : <input type="text" name="username" placeholder="이름을 입력하세요" required><br>
+        취미 : <input type="text" name="hobby"><br>
+        나이 : <input type="number" name="age" min="0"><br>
+        <input type="submit" value="제출">
+    </form>
+
+    <h1>삭제할 사용자 입력</h1>
+    <form action="/remove" method="POST">
+        이름 : <input type="text" name="username"><br>
+        <input type="submit" value="제출">
+    </form>
+
+    <h1>수정할 사용자 입력</h1>
+    <form action="/update" method="POST">
+        이름 : <input type="text" name="username" placeholder="이름을 입력하세요" required><br>
+        나이 : <input type="number" name="age" min="0" placeholder="수정할 나이 입력"><br>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
